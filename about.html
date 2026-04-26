@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Covicare</title>
+    <meta name="description" content="Meet the research team behind the Covicare project.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .member-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.15);
+            border-color: var(--accent-primary);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem auto;
+            border: 3px solid var(--accent-primary);
+            padding: 4px;
+            background: var(--bg-secondary);
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: var(--accent-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .member-email {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .member-email:hover {
+            color: var(--accent-secondary);
+        }
+
+        .member-info {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--glass-border);
+            padding-top: 1rem;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo"
+                style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="glass-card animate-fade-in" style="margin-top: 3rem;">
+            <h2>Meet the Research Team</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Dedicated
+                students striving for excellence in Deep Learning and Software Engineering, focused on creating reliable
+                screening tools for COVID-19.</p>
+
+            <div class="team-grid">
+
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <img src="images/indula.png" alt="Madhubhashana G.D.I. Photo" class="member-photo"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Madhubhashana&background=0D8ABC&color=fff&size=128'">
+                    <div class="member-name">Madhubhashana G.D.I.</div>
+                    <div class="member-role">Undergraduate Researcher</div>
+                    <a href="mailto:it22188236@my.sliit.lk" class="member-email">it22188236@my.sliit.lk</a>
+                    <div class="member-info">
+                        Department of Computer Science and Software Engineering<br>
+                        Sri Lanka Institute of Information Technology<br>
+                        Malabe, Sri Lanka
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="member-card delay-1">
+                    <img src="images/anjana.jpeg" alt="Horagolla S.A.T. Photo" class="member-photo"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Horagolla&background=10B981&color=fff&size=128'">
+                    <div class="member-name">Horagolla S.A.T.</div>
+                    <div class="member-role">Undergraduate Researcher</div>
+                    <a href="mailto:it22052056@my.sliit.lk" class="member-email">it22052056@my.sliit.lk</a>
+                    <div class="member-info">
+                        Department of Computer Science and Software Engineering<br>
+                        Sri Lanka Institute of Information Technology<br>
+                        Malabe, Sri Lanka
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="member-card delay-2">
+                    <img src="images/Amashi.jpg" alt="Chandrasiri G.A.S.D. Photo" class="member-photo"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Chandrasiri&background=F59E0B&color=fff&size=128'">
+                    <div class="member-name">Chandrasiri G.A.S.D.</div>
+                    <div class="member-role">Undergraduate Researcher</div>
+                    <a href="mailto:it22149626@my.sliit.lk" class="member-email">it22149626@my.sliit.lk</a>
+                    <div class="member-info">
+                        Department of Computer Science and Software Engineering<br>
+                        Sri Lanka Institute of Information Technology<br>
+                        Malabe, Sri Lanka
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="member-card delay-3">
+                    <img src="images/sahan.jpg" alt="Narangoda D.A.S. Photo" class="member-photo"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Narangoda&background=8B5CF6&color=fff&size=128'">
+                    <div class="member-name">Narangoda D.A.S.</div>
+                    <div class="member-role">Undergraduate Researcher</div>
+                    <a href="mailto:It22278180@my.sliit.lk" class="member-email">It22278180@my.sliit.lk</a>
+                    <div class="member-info">
+                        Department of Computer Science and Software Engineering<br>
+                        Sri Lanka Institute of Information Technology<br>
+                        Malabe, Sri Lanka
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

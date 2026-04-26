@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents | Covicare</title>
+    <meta name="description" content="Project Documents and Resources for Covid-19 Detection Project">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        .doc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .doc-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .doc-item:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+        .doc-icon {
+            font-size: 2.5rem;
+        }
+        .doc-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .doc-status {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            display: inline-block;
+            width: fit-content;
+        }
+        .status-ready {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+        .status-pending {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo" style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html" class="active">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="glass-card animate-fade-in" style="margin-top: 3rem;">
+            <h2>Project Documents</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Access all produced and pending project documentation below.</p>
+            
+            <ul class="doc-list">
+                <li class="doc-item">
+                    <div class="doc-icon">📄</div>
+                    <div class="doc-title">Project Charter</div>
+                    <span class="doc-status status-ready">Available</span>
+                    <a href="#" target="_blank" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.5rem;">View Document</a>
+                </li>
+                <li class="doc-item delay-1">
+                    <div class="doc-icon">📋</div>
+                    <div class="doc-title">Proposal Document</div>
+                    <span class="doc-status status-ready">Available</span>
+                    <a href="#" target="_blank" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.5rem;">View Document</a>
+                </li>
+                <li class="doc-item delay-2">
+                    <div class="doc-icon">☑️</div>
+                    <div class="doc-title">Checklists</div>
+                    <span class="doc-status status-ready">Available</span>
+                    <a href="https://drive.google.com/file/d/1dXo5_soHe2Y3JAO3VayMRNEI6qYyIRhc/view?usp=sharing" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem;">View Document</a>
+                </li>
+                <li class="doc-item delay-3">
+                    <div class="doc-icon">📚</div>
+                    <div class="doc-title">Final Documents (4 docs)</div>
+                    <span class="doc-status status-pending">Pending</span>
+                    <a href="#" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.5rem; opacity: 0.5;">Not Available Yet</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

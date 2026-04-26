@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain | Covicare</title>
+    <meta name="description" content="Project Domain details including research and methodology for Covid-19 Detection.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo" style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html" class="active">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="glass-card animate-fade-in" style="margin-top: 3rem;">
+            <h2>Project Domain</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">In-depth analysis and methodological framework of the Covicare project.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                
+                <div class="domain-section" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid var(--accent-primary);">
+                    <h3 style="color: var(--accent-primary);">Literature Survey</h3>
+                    <p style="color: var(--text-secondary);">The adoption of deep learning for medical diagnostics has accelerated, yet critical challenges persist. Early CXR models achieved high accuracy but functioned as opaque "black boxes," often falling prey to shortcut learning where they learned to detect text annotations rather than genuine pathology. Meanwhile, acoustic screening using techniques like MFCC showed promise, but suffered from significant performance degradation in noisy environments and failed to capture the non-linear, chaotic dynamics of diseased lung tissue.</p>
+                </div>
+
+                <div class="domain-section" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid var(--accent-secondary);">
+                    <h3 style="color: var(--accent-secondary);">Research Gaps</h3>
+                    <ol style="color: var(--text-secondary); margin-left: 1.5rem; line-height: 1.8;">
+                        <li>Most CXR models lack explicit lung segmentation, leading to spurious correlations.</li>
+                        <li>Standard spectral cough features completely miss non-linear turbulence dynamics.</li>
+                        <li>There is a distinct lack of clinically interpretable visual outputs.</li>
+                        <li>Existing models exhibit poor robustness to real-world ambient noise.</li>
+                        <li>Network architectures are often too large (1-10M parameters) for mobile edge deployment.</li>
+                    </ol>
+                </div>
+
+                <div class="domain-section" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid var(--success);">
+                    <h3 style="color: var(--success);">Research Objectives</h3>
+                    <p style="color: var(--text-secondary);">To design a multimodal, explainable system that achieves high classification accuracy while providing visual (via Grad-CAM) and physiological (via phase chaos heatmaps) interpretability. The system must maintain robustness in noisy, resource-limited environments and mitigate shortcut learning.</p>
+                </div>
+
+                <div class="domain-section" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid var(--warning);">
+                    <h3 style="color: var(--warning);">Methodology</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Our system features two parallel, independent pipelines that can be used separately or in ensemble:</p>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>CXR Pipeline:</strong> Uses a segmentation-first approach utilizing a U-Net architecture with a ResNet34 encoder to isolate the lung parenchyma. This mask is fed into a ResNet50 classifier, guaranteeing anatomical focus, and is verified using Grad-CAM.</li>
+                        <li><strong>Cough Pipeline:</strong> Extracts Cough Phase Chaos Embeddings (CPCE) by segmenting recordings into four physiological phases. Chaos-theoretic features (Higuchi Fractal Dimension, Largest Lyapunov Exponent, Sample Entropy) are calculated and fed into a highly efficient 1D CNN containing only ~85,000 parameters.</li>
+                    </ul>
+                </div>
+
+                <div class="domain-section" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid var(--accent-primary);">
+                    <h3 style="color: var(--accent-primary);">Technologies Used</h3>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <span style="background: rgba(59,130,246,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">Python 3.10</span>
+                        <span style="background: rgba(16,185,129,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">PyTorch 2.0</span>
+                        <span style="background: rgba(245,158,11,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">TensorFlow</span>
+                        <span style="background: rgba(139,92,246,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">OpenCV</span>
+                        <span style="background: rgba(239,68,68,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">Librosa</span>
+                        <span style="background: rgba(14,165,233,0.2); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem;">NumPy & SciPy</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

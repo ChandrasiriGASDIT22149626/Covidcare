@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Detection | Covicare</title>
+    <meta name="description" content="Combined Deep Learning Approach for Covid-19 Detection Using Cough Sound and Chest X-Ray Imaging">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        .author-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .author-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .author-name {
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .author-dept {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .author-email {
+            color: var(--accent-secondary);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        @media (min-width: 992px) {
+            .hero-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid var(--glass-border);
+        }
+        .abstract-section {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+        .abstract-section p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo" style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="glass-card animate-fade-in hero-layout" style="margin-top: 5rem; padding: 3rem;">
+            <div>
+                <h1 class="delay-1" style="font-size: 2.8rem; margin-bottom: 1rem;">Combined Deep Learning Approach for Covid-19 Detection</h1>
+                <p class="delay-2" style="font-size: 1.2rem; color: var(--accent-secondary); margin-bottom: 2rem; font-weight: 500;">
+                    Using Cough Sound and Chest X-Ray Imaging
+                </p>
+                <div class="delay-3" style="display: flex; gap: 1rem;">
+                    <a href="#abstract" class="btn btn-primary">Read Abstract</a>
+                    <a href="#authors" class="btn btn-outline">Research Team</a>
+                </div>
+            </div>
+            <div class="delay-2">
+                <img src="images/covid_hero.png" alt="Medical AI Covid-19 Detection Concept" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Abstract Section -->
+        <section id="abstract" class="glass-card animate-fade-in delay-2" style="margin-top: 3rem;">
+            <h2>Abstract</h2>
+            <div class="abstract-section">
+                <p>
+                    The COVID-19 pandemic underscored the urgent need for rapid, accessible, and reliable screening tools capable of functioning in resource-limited environments without reliance on laboratory infrastructure. This project presents a comprehensive, explainable deep learning framework that integrates two complementary diagnostic modalities: <strong>chest X-ray (CXR) analysis</strong> and <strong>cough sound acoustics</strong>, forming a unified multimodal screening pipeline.
+                </p>
+                <p>
+                    For CXR classification, a segmentation-first pipeline isolates lung parenchyma using a U-Net model with a ResNet34 encoder, followed by a ResNet50 classifier and Grad-CAM for visual explanations. This effectively mitigates shortcut learning by restricting model attention to clinically relevant anatomical regions.
+                </p>
+                <p>
+                    For cough analysis, a novel noise-robust component introduces <strong>Cough Phase Chaos Embeddings (CPCE)</strong>, segmenting recordings into physiological phases and classifying them using a lightweight 1D CNN. This component maintains extraordinary accuracy even under severe noise conditions, demonstrating superior robustness for real-world deployment.
+                </p>
+                <p>
+                    Both components prioritize clinical interpretability, providing Grad-CAM heatmaps and phase chaos heatmaps that align with verified physiological signatures. The complete pipeline is modular, reproducible, and specifically designed to address the key limitations of black-box medical AI systems.
+                </p>
+            </div>
+        </section>
+
+        <!-- Methodology Highlights -->
+        <section class="glass-card animate-fade-in delay-3" style="margin-top: 3rem;">
+            <h2>Dual Diagnostic Modalities</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border);">
+                    <h3 style="color: var(--accent-primary);">Chest X-Ray Analysis</h3>
+                    <p style="color: var(--text-secondary);">Utilizing a segmentation-first pipeline (U-Net + ResNet50) to enforce anatomical focus. Validated with Grad-CAM to ensure the AI focuses on clinically relevant lung regions, achieving 92.4% validation accuracy.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border);">
+                    <h3 style="color: var(--accent-secondary);">Cough Acoustic Analysis</h3>
+                    <p style="color: var(--text-secondary);">Introducing Phase Chaos Embeddings (CPCE) to capture nonlinear dynamics. Processed with a lightweight 1D CNN (~85k params), it achieves 95.2% accuracy and is highly robust against background noise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authors Section -->
+        <section id="authors" class="glass-card animate-fade-in delay-3" style="margin-top: 3rem;">
+            <h2>Research Team</h2>
+            <div class="author-grid">
+                <div class="author-card">
+                    <div class="author-name">Liyanage R.P.B</div>
+                    <div class="author-dept">Department of Computer System Engineering<br>Sri Lanka Institute of Information Technology</div>
+                    <a href="mailto:rangi.l@sliit.lk" class="author-email">rangi.l@sliit.lk</a>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Madhubhashana G.D.I.</div>
+                    <div class="author-dept">Department of Computer Science and Software Engineering<br>Sri Lanka Institute of Information Technology</div>
+                    <a href="mailto:it22188236@my.sliit.lk" class="author-email">it22188236@my.sliit.lk</a>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Horagolla S.A.T.</div>
+                    <div class="author-dept">Department of Computer Science and Software Engineering<br>Sri Lanka Institute of Information Technology</div>
+                    <a href="mailto:it22052056@my.sliit.lk" class="author-email">it22052056@my.sliit.lk</a>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Narangoda D.A.S.</div>
+                    <div class="author-dept">Department of Computer Science and Software Engineering<br>Sri Lanka Institute of Information Technology</div>
+                    <a href="mailto:it22278180@my.sliit.lk" class="author-email">it22278180@my.sliit.lk</a>
+                </div>
+                <div class="author-card">
+                    <div class="author-name">Chandrasiri G.A.S.D.</div>
+                    <div class="author-dept">Department of Computer Science and Software Engineering<br>Sri Lanka Institute of Information Technology</div>
+                    <a href="mailto:it22149626@my.sliit.lk" class="author-email">it22149626@my.sliit.lk</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

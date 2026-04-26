@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestones | Covicare</title>
+    <meta name="description" content="Project Milestones and Assessments for Covid-19 Detection Project">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        .milestone-select {
+            width: 100%;
+            max-width: 400px;
+            padding: 1rem;
+            margin: 0 auto 2rem auto;
+            display: block;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .milestone-details {
+            display: none;
+            background: rgba(255,255,255,0.02);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            animation: fadeInUp 0.5s ease backwards;
+        }
+        
+        .milestone-details.active {
+            display: block;
+        }
+        
+        .milestone-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 1rem;
+        }
+        
+        .badge {
+            background: rgba(59,130,246,0.2);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box {
+            background: rgba(255,255,255,0.03);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-secondary);
+        }
+
+        .rules-list {
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+        }
+        .rules-list li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo" style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones" class="active">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="glass-card animate-fade-in" style="margin-top: 3rem;">
+            <h2>Project Milestones</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Select an assessment from the dropdown below to view its specific scheduling, marks, and critical rules.</p>
+            
+            <select id="milestoneSelector" class="milestone-select">
+                <option value="proposal">Project Proposal</option>
+                <option value="progress1">Progress Presentation-1</option>
+                <option value="progress2">Progress Presentation-2</option>
+                <option value="final">Final Assessment</option>
+                <option value="viva">Viva</option>
+            </select>
+
+            <!-- Project Proposal -->
+            <div id="proposal" class="milestone-details active">
+                <div class="milestone-header">
+                    <h3 style="color: var(--accent-primary); margin: 0;">Project Proposal (PP)</h3>
+                    <span class="badge">Marks: 6%</span>
+                </div>
+                <p><strong>Date:</strong> September 8th to 12th, 2025 (In-person)</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">The Proposal Presentation sets the foundation for the deep learning architecture and research focus.</p>
+                
+                <div class="assessment-grid">
+                    <div class="info-box"><strong>Duration:</strong> 30 Minutes</div>
+                    <div class="info-box"><strong>Presentation:</strong> 15 mins</div>
+                    <div class="info-box"><strong>Q&A Session:</strong> 10 mins</div>
+                    <div class="info-box"><strong>Marking:</strong> 5 mins</div>
+                </div>
+
+                <h4 style="margin-top: 2rem; color: var(--warning);">Critical Instructions</h4>
+                <ul class="rules-list">
+                    <li>Please be courteous and arrive at the venue at least <strong>30 minutes</strong> before the scheduled time.</li>
+                    <li>Bring the necessary connectors to connect your laptop to the projector.</li>
+                    <li>Practice effectively and use the allotted time wisely. No extra time will be provided.</li>
+                    <li>Bring <strong>three copies</strong> of the PP Justification Sheets.</li>
+                    <li>Use the proposal presentation template provided in the Lecture Materials section.</li>
+                    <li style="color: var(--danger);">Missing the assessment results in a zero grade. No reschedule requests will be considered.</li>
+                </ul>
+            </div>
+
+            <!-- Progress Presentation 1 -->
+            <div id="progress1" class="milestone-details">
+                <div class="milestone-header">
+                    <h3 style="color: var(--accent-primary); margin: 0;">Progress Presentation-1 (PP1)</h3>
+                    <span class="badge">Assessment</span>
+                </div>
+                <p><strong>Date:</strong> December 15th to 19th, 2025</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">Initial demonstration of the CXR and Cough acoustic pipelines.</p>
+                
+                <div class="assessment-grid">
+                    <div class="info-box"><strong>Duration:</strong> 40 Minutes</div>
+                    <div class="info-box"><strong>Presentation:</strong> 10 mins</div>
+                    <div class="info-box"><strong>Demonstration:</strong> 10 mins</div>
+                    <div class="info-box"><strong>Q&A Session:</strong> 15 mins</div>
+                    <div class="info-box"><strong>Marking:</strong> 5 mins</div>
+                </div>
+
+                <h4 style="margin-top: 2rem; color: var(--warning);">Critical Instructions</h4>
+                <ul class="rules-list">
+                    <li>All groups are kindly requested to strictly adhere to the allocated time.</li>
+                </ul>
+            </div>
+
+            <!-- Progress Presentation 2 -->
+            <div id="progress2" class="milestone-details">
+                <div class="milestone-header">
+                    <h3 style="color: var(--accent-primary); margin: 0;">Progress Presentation-2 (PP2)</h3>
+                    <span class="badge">Assessment</span>
+                </div>
+                <p><strong>Date:</strong> March 9th to 12th, 2026</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">Detailed review of the completed machine learning models and feature extraction methods.</p>
+                
+                <div class="assessment-grid">
+                    <div class="info-box"><strong>Duration:</strong> 40 Minutes</div>
+                    <div class="info-box"><strong>Presentation:</strong> 6 mins (1 min video + 5 min live by selected member)</div>
+                    <div class="info-box"><strong>Demo & Q&A:</strong> 30 mins</div>
+                    <div class="info-box"><strong>Marking:</strong> 4 mins</div>
+                </div>
+
+                <h4 style="margin-top: 2rem; color: var(--warning);">Critical Instructions</h4>
+                <ul class="rules-list">
+                    <li>Please be courteous and arrive at the venue at least <strong>30 minutes</strong> before the scheduled time.</li>
+                    <li>Bring the necessary connectors to connect your laptop to the projector.</li>
+                    <li>Practice effectively and use the allotted time wisely. No extra time will be provided.</li>
+                    <li style="color: var(--danger);">Missing the assessment results in a zero grade. No reschedule requests will be considered.</li>
+                </ul>
+            </div>
+
+            <!-- Final Assessment -->
+            <div id="final" class="milestone-details">
+                <div class="milestone-header">
+                    <h3 style="color: var(--accent-primary); margin: 0;">Final Assessment</h3>
+                    <span class="badge">Final Phase</span>
+                </div>
+                <p><strong>Date:</strong> July 25th to 26th, 2026</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">Final demonstration of the completed multimodal Covid-19 screening system.</p>
+                
+                <div class="assessment-grid">
+                    <div class="info-box"><strong>Total Block:</strong> 1 Hour</div>
+                    <div class="info-box"><strong>Presentation:</strong> 5 mins</div>
+                    <div class="info-box"><strong>Demonstration:</strong> 10 mins</div>
+                    <div class="info-box"><strong>Marking:</strong> 5 mins</div>
+                </div>
+
+                <h4 style="margin-top: 2rem; color: var(--warning);">Critical Instructions</h4>
+                <ul class="rules-list">
+                    <li>Download the Final Presentation Template from the provided link.</li>
+                    <li>Please note that links should not be shared in private groups. All access should be provided only through the course web page.</li>
+                    <li>Website evaluation timetables will also be shared prior to the assessment.</li>
+                </ul>
+            </div>
+
+            <!-- Viva -->
+            <div id="viva" class="milestone-details">
+                <div class="milestone-header">
+                    <h3 style="color: var(--accent-primary); margin: 0;">Viva Session</h3>
+                    <span class="badge">Defense</span>
+                </div>
+                <p><strong>Date:</strong> July 25th to 26th, 2026</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">The Viva operates as a core part of the 1-hour Final Assessment block.</p>
+                
+                <div class="assessment-grid">
+                    <div class="info-box"><strong>Total Block:</strong> 1 Hour</div>
+                    <div class="info-box"><strong>Viva Session:</strong> 40 mins</div>
+                </div>
+
+                <h4 style="margin-top: 2rem; color: var(--warning);">Overview</h4>
+                <ul class="rules-list">
+                    <li>Individual members will be evaluated on their specific technical contributions to the Deep Learning pipeline (CXR segmentation, Cough Phase Chaos Embeddings) and their ability to defend architectural decisions.</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selector = document.getElementById('milestoneSelector');
+            const details = document.querySelectorAll('.milestone-details');
+
+            // Handle dropdown change
+            selector.addEventListener('change', (e) => {
+                const selectedId = e.target.value;
+                
+                details.forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                
+                document.getElementById(selectedId).classList.add('active');
+            });
+
+            // Handle URL hashes on load
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                if (document.getElementById(hash)) {
+                    selector.value = hash;
+                    selector.dispatchEvent(new Event('change'));
+                }
+            }
+        });
+    </script>
+</body>
+</html>

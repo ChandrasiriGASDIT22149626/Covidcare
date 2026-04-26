@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Covicare</title>
+    <meta name="description" content="Get in touch with the Covicare project team.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info {
+            background: rgba(255,255,255,0.02);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+        .contact-form {
+            background: rgba(255,255,255,0.02);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: var(--accent-primary);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Covicare Logo" style="height: 30px; margin-right: 8px; vertical-align: middle;">Covi<span>care</span></a>
+        <div class="mobile-toggle">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li class="dropdown">
+                <a href="#milestones">Milestones ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="milestones.html#proposal">Project Proposal</a></li>
+                    <li><a href="milestones.html#progress1">Progress Presentation 1</a></li>
+                    <li><a href="milestones.html#progress2">Progress Presentation 2</a></li>
+                    <li><a href="milestones.html#final">Final Assessment</a></li>
+                    <li><a href="milestones.html#viva">Viva</a></li>
+                </ul>
+            </li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="glass-card animate-fade-in" style="margin-top: 3rem;">
+            <h2>Contact Us</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Have questions about our project? Feel free to reach out to our researchers using the information below or by filling out the contact form.</p>
+            
+            <div class="contact-container">
+                <!-- General Info -->
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 2rem;">General Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <h4 style="margin-bottom: 0.2rem;">Phone Numbers</h4>
+                        <p style="color: var(--text-secondary);">Madhubhashana G.D.I: 0760162181</p>
+                        <p style="color: var(--text-secondary);">Horagolla S.A.T: 0789100053</p>
+                        <p style="color: var(--text-secondary);">Chandrasiri G.A.S.D: 0713169535</p>
+                        <p style="color: var(--text-secondary);">Narangoda D.A.S: 0764240722</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <h4 style="margin-bottom: 0.2rem;">Email Addresses</h4>
+                        <p style="color: var(--text-secondary);"><a href="mailto:it22188236@my.sliit.lk">it22188236@my.sliit.lk</a></p>
+                        <p style="color: var(--text-secondary);"><a href="mailto:it22052056@my.sliit.lk">it22052056@my.sliit.lk</a></p>
+                        <p style="color: var(--text-secondary);"><a href="mailto:it22149626@my.sliit.lk">it22149626@my.sliit.lk</a></p>
+                        <p style="color: var(--text-secondary);"><a href="mailto:It22278180@my.sliit.lk">It22278180@my.sliit.lk</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h4 style="margin-bottom: 0.2rem;">Location</h4>
+                        <p style="color: var(--text-secondary);">Department of Computer Science and Software Engineering<br>SLIIT Campus, Malabe<br>Sri Lanka</p>
+                    </div>
+                </div>
+
+                <!-- Email Form Template -->
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 2rem;">Send us a Message</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message template submitted! (This is a frontend demo)');">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Covicare Research Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
