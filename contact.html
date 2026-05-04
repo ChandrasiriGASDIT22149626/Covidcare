@@ -133,7 +133,21 @@
                 <!-- Email Form Template -->
                 <div class="contact-form">
                     <h3 style="margin-bottom: 2rem;">Send us a Message</h3>
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message template submitted! (This is a frontend demo)');">
+                    <script>
+                        function sendWhatsAppMessage(event) {
+                            event.preventDefault();
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const subject = document.getElementById('subject').value;
+                            const message = document.getElementById('message').value;
+                            
+                            const text = `*New Inquiry: ${subject}*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:*\n${message}`;
+                            const whatsappUrl = `https://wa.me/94760162181?text=${encodeURIComponent(text)}`;
+                            
+                            window.open(whatsappUrl, '_blank');
+                        }
+                    </script>
+                    <form action="#" method="POST" onsubmit="sendWhatsAppMessage(event)">
                         <div class="form-group">
                             <label class="form-label" for="name">Your Name</label>
                             <input type="text" id="name" class="form-control" placeholder="John Doe" required>
